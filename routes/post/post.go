@@ -7,7 +7,7 @@ import (
 
 func Routes(route *gin.Engine)  {
 
-	c := controller.PostController{}
+	c := controller.NewPostController()
 
 	home := route.Group("/posts")
 	home.GET("/", c.Index)

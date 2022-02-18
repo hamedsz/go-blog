@@ -6,6 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang-blog/config/database"
+	"golang-blog/database/base"
 	"log"
 	"time"
 )
@@ -40,4 +41,8 @@ func GetDB() *mongo.Database {
 	}
 
 	return db.Database(database.GetDatabaseName())
+}
+
+type Database struct {
+	Model base.Model
 }
