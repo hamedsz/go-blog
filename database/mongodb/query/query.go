@@ -7,6 +7,8 @@ import (
 
 type QueryBuilder struct {
 	Filter map[string]interface{}
+	NumLimit int64
+	NumSkip int64
 }
 
 
@@ -37,6 +39,24 @@ func (query *QueryBuilder) WhereNotEqual(key string, value interface{}) base.Que
 	return query
 }
 
-func (query *QueryBuilder) Get() {
+func (query *QueryBuilder) Limit(limit int64) base.Query {
 
+	query.NumLimit = limit
+
+	return query
+}
+
+func (query *QueryBuilder) Skip(skip int64) base.Query {
+
+	query.NumSkip = skip
+
+	return query
+}
+
+func (query *QueryBuilder) GetLimit() int64 {
+	return query.NumLimit
+}
+
+func (query *QueryBuilder) GetSkip() int64 {
+	return query.NumSkip
 }

@@ -6,6 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"golang-blog/database/base"
+	"time"
 )
 
 func (db *Database) Save() error{
@@ -19,6 +20,9 @@ func (db *Database) Save() error{
 }
 
 func insert(model base.Model , db *Database) error{
+	model.SetCreatedAt(time.Now())
+	model.SetUpdatedAt(time.Now())
+
 	mapData := structs.Map(model)
 
 	result, err := db.Insert(model.Name(), model)
@@ -37,6 +41,8 @@ func insert(model base.Model , db *Database) error{
 }
 
 func update(model base.Model, db *Database) error {
+	model.SetUpdatedAt(time.Now())
+
 	mapData := structs.Map(model)
 
 	return db.Update(model.Name(), bson.M{

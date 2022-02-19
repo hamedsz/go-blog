@@ -1,16 +1,19 @@
 package post
 
-import "golang-blog/models/post"
+import (
+	"golang-blog/models/post"
+	post2 "golang-blog/requests/post"
+)
 
 type Service struct {
 
 }
 
-func (s *Service) Index() ([]post.Model, *int64 , error) {
+func (s *Service) Index(request post2.IndexRequest) ([]post.Model, *int64 , error) {
 
 	model := post.Model{}
 
-	query := model.GetDB().Query().WhereNotEqual("title", "hello2");
+	query := model.GetDB().Query().Limit(request.PageCount).Skip((request.Page-1) * request.PageCount);
 
 	results, err := model.GetDB().Find(query)
 

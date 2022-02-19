@@ -2,12 +2,19 @@ package mongodb
 
 import (
 	"context"
+	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang-blog/database/base"
 	"log"
 )
 
 func (db *Database) Find(query base.Query) ([]map[string]interface{}, error) {
-	cursor, err := GetDB().Collection(db.Model.Name()).Find(context.TODO(), query.GetFilter())
+
+	option := options.Find()
+
+	option.SetLimit(query.GetLimit())
+	option.SetSkip(query.GetSkip())
+
+	cursor, err := GetDB().Collection(db.Model.Name()).Find(context.TODO(), query.GetFilter(), option)
 
 	if err != nil {
 		return nil, err
