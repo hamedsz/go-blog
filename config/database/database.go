@@ -1,10 +1,11 @@
 package database
 
+import "os"
 
 func GetUri() string{
-	return "mongodb://localhost:27017/"
+	return os.Getenv("DB_URL")
 }
 
 func GetDatabaseName() string{
-	return "blog"
+	return os.Getenv("DB_NAME")
 }
