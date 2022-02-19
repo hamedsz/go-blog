@@ -5,6 +5,17 @@ import (
 	"golang-blog/requests/post"
 )
 
+// IndexPosts godoc
+// @Summary index posts
+// @Schemes
+// @Description index posts
+// @Tags Posts
+// @Param page query int false "Page Number"
+// @Param page_count query int false "Page Count"
+// @Accept json
+// @Produce json
+// @Success 200 {string} Post
+// @Router /posts [get]
 func (controller *PostController) Index(c *gin.Context)  {
 
 	req := post.NewIndexRequest()

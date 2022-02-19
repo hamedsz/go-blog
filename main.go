@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"golang-blog/routes"
+	_ "golang-blog/docs"
 )
 
 func main() {

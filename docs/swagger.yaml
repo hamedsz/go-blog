@@ -1,0 +1,28 @@
+info:
+  contact: {}
+paths:
+  /posts:
+    get:
+      consumes:
+      - application/json
+      description: index posts
+      parameters:
+      - description: Page Number
+        in: query
+        name: page
+        type: integer
+      - description: Page Count
+        in: query
+        name: page_count
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: index posts
+      tags:
+      - Posts
+swagger: "2.0"
