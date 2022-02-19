@@ -1,6 +1,6 @@
 package post
 
-import "golang-blog/services/post"
+import "github.com/hamedsz/go-blog/services/post"
 
 type PostController struct{
 	Service post.Service

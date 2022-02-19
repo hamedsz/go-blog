@@ -2,7 +2,7 @@ package post
 
 import (
 	"github.com/gin-gonic/gin"
-	controller "golang-blog/controllers/post"
+	controller "github.com/hamedsz/go-blog/controllers/post"
 )
 
 func Routes(route *gin.Engine)  {

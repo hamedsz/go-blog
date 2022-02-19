@@ -2,7 +2,7 @@ package post
 
 import (
 	"github.com/gin-gonic/gin"
-	"golang-blog/requests/post"
+	"github.com/hamedsz/go-blog/requests/post"
 )
 
 // IndexPosts godoc

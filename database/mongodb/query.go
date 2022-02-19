@@ -1,8 +1,8 @@
 package mongodb
 
 import (
-	"golang-blog/database/base"
-	"golang-blog/database/mongodb/query"
+	"github.com/hamedsz/go-blog/database/base"
+	"github.com/hamedsz/go-blog/database/mongodb/query"
 )
 
 func (db *Database) Query() base.Query {

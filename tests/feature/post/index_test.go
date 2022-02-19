@@ -3,9 +3,9 @@ package post
 import (
 	"github.com/kinbiko/jsonassert"
 	"github.com/stretchr/testify/assert"
-	"golang-blog/controllers/post"
-	post2 "golang-blog/models/post"
-	"golang-blog/tests/feature/base"
+	"github.com/hamedsz/go-blog/controllers/post"
+	post2 "github.com/hamedsz/go-blog/models/post"
+	"github.com/hamedsz/go-blog/tests/feature/base"
 	"testing"
 )
 

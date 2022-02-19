@@ -2,7 +2,7 @@ package home
 
 import (
 	"github.com/gin-gonic/gin"
-	controller "golang-blog/controllers/home"
+	controller "github.com/hamedsz/go-blog/controllers/home"
 )
 
 func Routes(route *gin.Engine)  {

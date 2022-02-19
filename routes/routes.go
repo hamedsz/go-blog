@@ -2,9 +2,9 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"golang-blog/routes/home"
-	"golang-blog/routes/post"
-	"golang-blog/routes/swagger"
+	"github.com/hamedsz/go-blog/routes/home"
+	"github.com/hamedsz/go-blog/routes/post"
+	"github.com/hamedsz/go-blog/routes/swagger"
 )
 
 func LoadRoutes(route *gin.Engine){

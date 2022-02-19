@@ -3,8 +3,8 @@ package post
 import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"golang-blog/database/base"
-	"golang-blog/database/mongodb"
+	"github.com/hamedsz/go-blog/database/base"
+	"github.com/hamedsz/go-blog/database/mongodb"
 	"time"
 )
 

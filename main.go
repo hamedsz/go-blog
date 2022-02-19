@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"golang-blog/routes"
-	_ "golang-blog/docs"
+	"github.com/hamedsz/go-blog/routes"
+	_ "github.com/hamedsz/go-blog/docs"
 )
 
 func main() {

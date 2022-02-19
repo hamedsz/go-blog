@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"golang-blog/config/database"
-	"golang-blog/database/base"
+	"github.com/hamedsz/go-blog/config/database"
+	"github.com/hamedsz/go-blog/database/base"
 	"log"
 	"time"
 )

@@ -2,7 +2,7 @@ package query
 
 import (
 	"go.mongodb.org/mongo-driver/bson"
-	"golang-blog/database/base"
+	"github.com/hamedsz/go-blog/database/base"
 )
 
 type QueryBuilder struct {

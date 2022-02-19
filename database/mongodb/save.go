@@ -5,7 +5,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"golang-blog/database/base"
+	"github.com/hamedsz/go-blog/database/base"
 	"time"
 )
 

@@ -1,4 +1,4 @@
-module golang-blog
+module github.com/hamedsz/go-blog
 
 go 1.17
 

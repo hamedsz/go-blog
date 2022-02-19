@@ -3,7 +3,7 @@ package mongodb
 import (
 	"context"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"golang-blog/database/base"
+	"github.com/hamedsz/go-blog/database/base"
 	"log"
 )
 

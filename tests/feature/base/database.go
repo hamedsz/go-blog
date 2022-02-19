@@ -2,7 +2,7 @@ package base
 
 import (
 	"context"
-	"golang-blog/database/mongodb"
+	"github.com/hamedsz/go-blog/database/mongodb"
 	"time"
 )
 

@@ -1,8 +1,8 @@
 package post
 
 import (
-	"golang-blog/models/post"
-	post2 "golang-blog/requests/post"
+	"github.com/hamedsz/go-blog/models/post"
+	post2 "github.com/hamedsz/go-blog/requests/post"
 )
 
 type Service struct {

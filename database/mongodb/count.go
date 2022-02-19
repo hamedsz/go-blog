@@ -2,7 +2,7 @@ package mongodb
 
 import (
 	"context"
-	"golang-blog/database/base"
+	"github.com/hamedsz/go-blog/database/base"
 )
 
 func (db *Database) Count(query base.Query) (int64, error) {

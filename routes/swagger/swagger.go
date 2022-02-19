@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"golang-blog/docs"
+	"github.com/hamedsz/go-blog/docs"
 )
 
 func Routes(route *gin.Engine)  {
