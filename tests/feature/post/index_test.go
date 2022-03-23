@@ -1,11 +1,11 @@
 package post
 
 import (
+	"github.com/hamedsz/go-blog/internal/controllers/post"
+	post2 "github.com/hamedsz/go-blog/internal/domain"
+	"github.com/hamedsz/go-blog/tests/feature/base"
 	"github.com/kinbiko/jsonassert"
 	"github.com/stretchr/testify/assert"
-	"github.com/hamedsz/go-blog/controllers/post"
-	post2 "github.com/hamedsz/go-blog/models/post"
-	"github.com/hamedsz/go-blog/tests/feature/base"
 	"testing"
 )
 
