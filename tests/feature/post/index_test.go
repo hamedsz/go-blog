@@ -1,7 +1,7 @@
 package post
 
 import (
-	"github.com/hamedsz/go-blog/internal/controllers/post"
+	"github.com/hamedsz/go-blog/internal/controllers"
 	post2 "github.com/hamedsz/go-blog/internal/domain"
 	"github.com/hamedsz/go-blog/tests/feature/base"
 	"github.com/kinbiko/jsonassert"
@@ -10,7 +10,7 @@ import (
 )
 
 func TestPostsIndexStatusCode(t *testing.T){
-	controller := post.NewPostController()
+	controller := controllers.NewPostController()
 
 	w := base.FeatureTest(controller.Index, "GET", nil , "")
 
@@ -32,7 +32,7 @@ func TestPostsIndexResponseStructure(t *testing.T){
 	base.ResetDB()
 	insertSamplePost()
 
-	w := base.FeatureTest(post.NewPostController().Index, "GET", nil , "")
+	w := base.FeatureTest(controllers.NewPostController().Index, "GET", nil , "")
 
 	jsonassert.New(t).Assertf(w.Body.String(), `
     {
@@ -63,7 +63,7 @@ func TestPostsIndexPaginationPageOne(t *testing.T)  {
 
 
 	w := base.FeatureTest(
-		post.NewPostController().Index,
+		controllers.NewPostController().Index,
 		"GET",
 		nil,
 		"?page_count=10&page=1",
@@ -162,7 +162,7 @@ func TestPostsIndexPaginationPageTwo(t *testing.T)  {
 
 
 	w := base.FeatureTest(
-		post.NewPostController().Index,
+		controllers.NewPostController().Index,
 		"GET",
 		nil,
 		"?page_count=10&page=2",

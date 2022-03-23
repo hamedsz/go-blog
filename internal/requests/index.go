@@ -1,4 +1,4 @@
-package post
+package requests
 
 type IndexRequest struct {
 	Page      int64 `form:"page"`

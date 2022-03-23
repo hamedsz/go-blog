@@ -1,8 +1,8 @@
-package post
+package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/hamedsz/go-blog/internal/requests/post"
+	"github.com/hamedsz/go-blog/internal/requests"
 )
 
 // IndexPosts godoc
@@ -18,7 +18,7 @@ import (
 // @Router /posts [get]
 func (controller *PostController) Index(c *gin.Context)  {
 
-	req := post.NewIndexRequest()
+	req := requests.NewIndexRequest()
 
 	err := c.BindQuery(&req)
 
